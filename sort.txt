@@ -1,0 +1,12 @@
+what subjects do you take
+
+if no math hl: eliminate maths
+if no physics: eliminate physics and engineering
+
+if math + physics: suggest physics + engineering
+if math hl + physics hl: suggest physics
+
+if physics + cs: suggest engineering
+if math + physics: suggest physics
+
+

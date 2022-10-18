@@ -1,0 +1,63 @@
+uni name
+uni rank
+course name
+course overview
+entry requirements
+entry fees
+
+recomendation system based on selected university
+
+why bs4 selected
+
+CS TOP 20
+
+1 - Oxford
+2 - CalTech
+2 - Harvard
+3 - Stanford
+4 - Cambridge
+5- MIT
+6 - Princeton
+7 - UC Berkeley
+8 - Yale
+9 - UChicago
+10 - Columbia
+11 - Imperial (London)
+12 - John Hopkins
+12 - Pennsylvania
+13 - ETH Zurich (Swiss)
+14 - Peking (China)
+14 - Tshingua (China)
+15 - UToronto
+16 - UCL
+17 - U LA
+18 - U Singapore
+19 - Cornell
+20 - Duke
+
+Electrical & Electronic Engineering Top 20
+
+1 - Oxford
+2 - CalTech
+2 - Harvard
+3 - Stanford
+4 - Cambridge
+5- MIT
+6 - Princeton
+7 - UC Berkeley
+8 - Yale
+9 - Columbia
+10 - Imperial
+11 - John Hopkins
+11 - Pennsylvania
+12 - Pennsylvania
+13 - ETH Zurich (Swiss)
+14 - Peking (China)
+14 - Tshingua (China)
+15 - UToronto
+16 - UCL
+17 - U LA
+18 - U Singapore
+19 - Cornell
+20 - Duke
+

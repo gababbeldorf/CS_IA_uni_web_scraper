@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c792ea; font-style: italic;}
+.s1 { color: #c3cee3;}
+.s2 { color: #717cb4; font-style: italic;}
+.s3 { color: #c3e88d;}
+.s4 { color: #89ddff;}
+</style>
+</head>
+<body bgcolor="#0f111a">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">requests</span>
+<span class="s0">from </span><span class="s1">bs4 </span><span class="s0">import </span><span class="s1">BeautifulSoup</span>
+
+<span class="s2"># QMUL</span>
+<span class="s3">''' 
+url = &quot;https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2023/electronic-engineering/&quot; 
+ 
+r = requests.get(url) 
+soup = BeautifulSoup(r.content, &quot;html.parser&quot;) 
+ 
+ 
+# UNI + COURSE NAME 
+class Name: 
+    title = soup.find('title') 
+    print(title.string) 
+ 
+ 
+# BLANK 
+print() 
+ 
+ 
+# COURSE OVERVIEW 
+class CourseOverview: 
+    print('Course Overview') 
+ 
+    overview = soup.find('div', class_='tabs', id='structure-tabs') 
+ 
+    for ul_tag in overview.findAll('ul'): 
+        print(ul_tag.text) 
+ 
+ 
+# ENTRY REQUIREMENTS 
+class EntryRequirements: 
+    print(&quot;Entry Requirements&quot;) 
+ 
+    td_group = [] 
+    tr_group = [] 
+ 
+    e_r = soup.find('div', class_=&quot;disclosure-box__content prose&quot;) 
+ 
+    for td_tag in e_r.findAll('td', class_='fill'): 
+        td_group.append(td_tag.text) 
+        #print(td_tag.text) 
+ 
+    for tr_tag in e_r.findAll('tr'): 
+        tr_group.append(tr_tag.text) 
+        #print(tr_tag.text) 
+ 
+    for n in range(len(td_group)): 
+        print(td_group[n]) 
+        print(tr_group[n]) 
+'''</span>
+
+<span class="s3">&quot;&quot;&quot; 
+Top 200 = Web scrape 
+Each uni = manual JSON file 
+&quot;&quot;&quot;</span>
+
+<span class="s2"># TOP 200 SCRAPE</span>
+
+<span class="s1">url </span><span class="s4">= </span><span class="s3">&quot;https://en.wikipedia.org/wiki/List_of_top_1000_universities_in_the_world&quot;</span>
+
+<span class="s1">r </span><span class="s4">= </span><span class="s1">requests</span><span class="s4">.</span><span class="s1">get</span><span class="s4">(</span><span class="s1">url</span><span class="s4">)</span>
+<span class="s1">soup </span><span class="s4">= </span><span class="s1">BeautifulSoup</span><span class="s4">(</span><span class="s1">r</span><span class="s4">.</span><span class="s1">content</span><span class="s4">, </span><span class="s3">&quot;html.parser&quot;</span><span class="s4">)</span>
+
+<span class="s2"># UNI NAME</span>
+
+<span class="s1">tr_group </span><span class="s4">= []</span>
+<span class="s1">td_group </span><span class="s4">= []</span>
+<span class="s2"># result = soup.find_all('tr', table=&quot;wikitable sortable jquery-tablesorter&quot;)</span>
+<span class="s0">for </span><span class="s1">tr_tag </span><span class="s0">in </span><span class="s1">soup</span><span class="s4">.</span><span class="s1">findAll</span><span class="s4">(</span><span class="s3">'tr'</span><span class="s4">, </span><span class="s1">table</span><span class="s4">=</span><span class="s3">&quot;wikitable sortable jquery-tablesorter&quot;</span><span class="s4">):</span>
+    <span class="s1">tr_group</span><span class="s4">.</span><span class="s1">append</span><span class="s4">(</span><span class="s1">tr_tag</span><span class="s4">)</span>
+
+<span class="s0">for </span><span class="s1">td_tag </span><span class="s0">in </span><span class="s1">soup</span><span class="s4">.</span><span class="s1">findAll</span><span class="s4">(</span><span class="s3">'td'</span><span class="s4">, </span><span class="s1">class_</span><span class="s4">=</span><span class="s3">&quot;mw-parser-output&quot;</span><span class="s4">):</span>
+    <span class="s1">td_group</span><span class="s4">.</span><span class="s1">append</span><span class="s4">(</span><span class="s1">td_tag</span><span class="s4">)</span>
+
+<span class="s0">for </span><span class="s1">n </span><span class="s0">in </span><span class="s1">tr_group</span><span class="s4">:</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s1">tr_group</span><span class="s4">[</span><span class="s1">n</span><span class="s4">])</span>
+
+</pre>
+</body>
+</html>
