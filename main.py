@@ -80,7 +80,6 @@ clean_unis = []
 top_150 = []
 =======
 top_200 = []
->>>>>>> 060377d33fdcd9f6c71ad2b3dba4e50eae83783c
 
 for d in data:
     if len(d) > 2:
@@ -89,20 +88,19 @@ for d in data:
 
 for c in clean_unis:
     if int(c[2]) < 200:
-<<<<<<< HEAD
+
         top_150.append(c)
-=======
+
         top_200.append(c)
->>>>>>> 060377d33fdcd9f6c71ad2b3dba4e50eae83783c
 
 # print(*clean_unis, sep='\n')
 
 # Pandas
-<<<<<<< HEAD
+
 df = pd.DataFrame(top_150)
 =======
 df = pd.DataFrame(top_200)
->>>>>>> 060377d33fdcd9f6c71ad2b3dba4e50eae83783c
+
 
 # Pandas to HTML
 print(df.to_html())
